@@ -3,8 +3,6 @@ const { execSync } = require('child_process');
 const fetch = require('node-fetch');
 const { Client, Routes } = require('discord.js');
 
-client.login(process.env.TOKEN);
-
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('DONE! Application/Bot is up and running.');
@@ -38,3 +36,5 @@ client.on('interactionCreate', (interaction) => {
     interaction.reply('this command\'s response has not been added yet!');
   }
 });
+
+client.login(process.env.TOKEN);
