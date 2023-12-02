@@ -3,11 +3,6 @@ const { execSync } = require('child_process');
 const fetch = require('node-fetch');
 const { Client, Routes } = require('discord.js');
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log('DONE! Application/Bot is up and running.');
-  });
-
 const ping = {
   name: 'ping',
   description: 'Pings the bot and shows the latency'
@@ -38,3 +33,8 @@ client.on('interactionCreate', (interaction) => {
 });
 
 client.login(process.env.TOKEN);
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log('DONE! Application/Bot is up and running.');
+  });
