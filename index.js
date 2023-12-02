@@ -38,5 +38,3 @@ client.on('interactionCreate', (interaction) => {
     interaction.reply('this command\'s response has not been added yet!');
   }
 });
-  
-})();
