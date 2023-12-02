@@ -36,8 +36,6 @@ client.on('interactionCreate', (interaction) => {
   }
 });
 
-  await client.rest.put(Routes.applicationCommands(client.user.id), { body: commands });
-
   console.log('DONE | Application/Bot is up and running. DO NOT CLOSE THIS TAB UNLESS YOU ARE FINISHED USING THE BOT, IT WILL PUT THE BOT OFFLINE.');
 })();
 
