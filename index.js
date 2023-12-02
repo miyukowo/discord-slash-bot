@@ -14,12 +14,12 @@ const ping = {
 
 
 // Command Example
-const command2 = {
-  name:'command2',
-  description:'yes'
+const tvp = {
+  name:'tvp',
+  description:'Example'
 }
 
-const commands = [ping, command2]; // Add your commands with commas to add them to the bot!
+const commands = [ping, tvp]; // Add your commands with commas to add them to the bot!
 // Join the Discord for support: https://discord.gg/M5MSE9CvNM
 
 const client = new Client({ intents: [] });
@@ -29,8 +29,8 @@ const rl = createInterface({ input: process.stdin, output: process.stdout });
 client.on('interactionCreate', (interaction) => {
   if (interaction.commandName === 'ping') {
     interaction.reply(`Latency is ${Date.now() - interaction.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);  
-  } else if(interaction.commandName === 'command2') { // This is the example command's name!
-    interaction.reply('example command');
+  } else if(interaction.commandName === 'tvp') { // This is the example command's name!
+    interaction.reply('Example');
   } else { // a response if you forget to add the command here
     interaction.reply('this command\'s response has not been added yet!');
   }
