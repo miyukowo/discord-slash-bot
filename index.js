@@ -3,8 +3,11 @@ const { execSync } = require('child_process');
 const fetch = require('node-fetch');
 const { Client, Routes } = require('discord.js');
 
+client.login(process.env.TOKEN);
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  console.log('DONE! Application/Bot is up and running.');
   });
 
 const ping = {
@@ -35,8 +38,5 @@ client.on('interactionCreate', (interaction) => {
     interaction.reply('this command\'s response has not been added yet!');
   }
 });
-
-  console.log('DONE | Application/Bot is up and running. DO NOT CLOSE THIS TAB UNLESS YOU ARE FINISHED USING THE BOT, IT WILL PUT THE BOT OFFLINE.');
+  
 })();
-
-client.login(process.env.TOKEN);
