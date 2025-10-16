@@ -10,7 +10,7 @@ const ping = {
 
 // Command Example
 const miyuko = {
-  name:'miyukowo',
+  name:'miyuko',
   description:'say hello to miyukowo'
 };
 
@@ -22,7 +22,7 @@ const rl = createInterface({ input: process.stdin, output: process.stdout });
 client.on('interactionCreate', (interaction) => {
   if (interaction.commandName === 'ping') {
     interaction.reply(`Latency is ${Date.now() - interaction.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);  
-  } else if(interaction.commandName === 'tvp') {
+  } else if(interaction.commandName === 'miyuko') {
     interaction.reply(`whatup <@${interaction.user.id}>!`);
   } else {
     interaction.reply('this command\'s response has not been added yet!');
