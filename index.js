@@ -24,7 +24,6 @@ client.on('interactionCreate', (interaction) => {
     interaction.reply(`Latency is ${Date.now() - interaction.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);  
   } else if(interaction.commandName === 'tvp') {
     interaction.reply(`whatup <@${interaction.user.id}>!`);
-  }
   } else {
     interaction.reply('this command\'s response has not been added yet!');
   }
